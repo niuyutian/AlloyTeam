@@ -1,0 +1,584 @@
+// banner
+a:hover{text-decoration:none}
+.carousel {
+    // 如果视口<768, 图250 max-width
+    // 如果视口<992, 图400 max-width
+    // 如果视口>992, 图500 min-width
+
+    img {
+        height: 100%!important;
+    }
+
+    @media (max-width: 992px) {
+        .item {
+            height: 400px;
+        }
+        .item.active{
+            .hire-info{
+                .hire-name{
+                    font-family: STXihei,华文细黑,Microsoft YaHei,微软雅黑;
+                    transition: all .5s;
+                    transform: translate(100px,-60px);
+                    font-size: 30px;
+                }
+                .hire-title{
+                    transition: all .5s;
+                    font-family: STXihei,华文细黑,Microsoft YaHei,微软雅黑;
+                    transform: translate(-200px,-50px);
+                    font-size: 40px;
+                }
+                .title-name{
+                    font-size: 50px;
+                    transition: all .5s;
+                    transform: translate(0px,-80px);
+                }
+                .title-desc{
+                    font-size: 30px;
+                    transition: all .5s;
+                    transform: translate(0px,-60px);
+                }
+            }
+        }
+        img.logo{
+            text-align: center;
+        }
+        h6.slogan{
+            text-align: center;
+        }
+        p.copyright{
+            text-align: center;
+        }
+        .col-md-5.webmeta{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .item {
+            height: 250px;
+        }
+        .item.active{
+            .hire-info{
+                .hire-name{
+                    font-family: STXihei,华文细黑,Microsoft YaHei,微软雅黑;
+                    transition: all .5s;
+                    transform: translate(0px,0px);
+                    font-size: 20px;
+                }
+                .hire-title{
+                    transition: all .5s;
+                    font-family: STXihei,华文细黑,Microsoft YaHei,微软雅黑;
+                    transform: translate(0px,-10px);
+                    font-size: 25px;
+                }
+                .title-name{
+                    font-size: 30px;
+                    transition: all .5s;
+                    transform: translate(0px,-20px);
+                }
+                .title-desc{
+                    font-size: 20px;
+                    transition: all .5s;
+                    transform: translate(0px,-10px);
+                }
+            }
+        }
+        img.logo{
+            text-align: center;
+        }
+        h6.slogan{
+            text-align: center;
+        }
+        p.copyright{
+            text-align: center;
+        }
+        .footer{
+            .container{
+                .row{
+                    .ad{
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+
+    }
+
+    @media (min-width: 992px) {
+        .item {
+            height: 500px;
+        }
+        .item.active{
+            .hire-info{
+                .hire-name{
+                    font-family: STXihei,华文细黑,Microsoft YaHei,微软雅黑;
+                    transition: all .5s;
+                    transform: translate(150px,-60px);
+                }
+                .hire-title{
+                    transition: all .5s;
+                    font-family: STXihei,华文细黑,Microsoft YaHei,微软雅黑;
+                    transform: translate(-250px,-50px);
+                }
+                .title-name{
+                    font-size: 60px;
+                    transition: all .5s;
+                    transform: translate(0px,-80px);
+                }
+                .title-desc{
+                    font-size: 40px;
+                    transition: all .5s;
+                    transform: translate(0px,-60px);
+                }
+            }
+        }
+    }
+    .item{
+        background: #175aa0 50%;
+        background-size: cover;
+        &:nth-child(1) {
+            background-image: url(./uploads/banner_1.jpg);
+          }
+          &:nth-child(2) {
+            background-image: url(./uploads/banner_2.jpg);
+          }
+          &:nth-child(3) {
+            background-image: url(./uploads/banner_3.jpg);
+          }
+          &:nth-child(4) {
+            background-image: url(./uploads/banner_4.jpg);
+          }
+        .hire-info{
+            .hire-name{
+                transform: translate(1500px,-60px);
+                font-size: 40px;
+            }
+            .hire-title{
+                transform: translate(-1500px,-50px);
+                font-size: 50px;
+            }
+            .title-name{
+                font-size: 50px;
+                transform: translate(0px,-550px);
+
+            }
+            .title-desc{
+                font-size: 40px;
+                transform: translate(0px,250px);
+            }
+        }
+    }
+
+}
+
+// 头部
+.navbar-default {
+    padding: 20px 0 0 0;
+    background-color: transparent;
+    border: 0;
+    transition: all .4s ;
+    .navbar-header{
+        a{
+            padding: 5px 10px;
+        }
+    }
+    .collapse{
+        ul.nav{
+            li> a{
+                color: hsla(0,0%,100%,.65);
+                font-weight: 400;
+                font-size: 16px;
+            }
+            li > a.hot{
+                background-image: -webkit-linear-gradient(left,#cddc39,#ff9800 25%,#cddc39 50%,#ff9800 75%,#cddc39)!important;
+                -webkit-text-fill-color: transparent!important;
+                -webkit-background-clip: text!important;
+                -webkit-background-size: 200% 100%!important;
+                -webkit-animation: masked-animation 2s infinite linear!important;
+            }
+            li>a:hover{
+                color:#ff9800
+            }
+            li>.hott::before{
+                content: "";
+                display: inline-block;
+                background-image: url("../images/fire.png");
+                width: 12px;
+                height: 16px;
+                background-size: 12px 16px;
+            }
+        }
+    }
+}
+.navbar-default.scrolled{
+    padding: 8px 0 0 10px;
+    background-color: #26282c;
+    transition: all .4s ;
+
+}
+
+// 开源项目
+.project {
+    padding-top: 30px;
+    text-align: center;
+    .h2{
+        color: #494d55;
+        font-family: Segoe UI Light,Microsoft YaHei,Arial,Helvetica,sans-serif;
+        height: 40px;
+    }
+    .p01{
+        height: 45px;
+        color: #919191;
+    }
+    .container {
+        div {
+            // background-color: pink;
+            a {
+                display: block;
+                border-radius: 4px;
+                padding: 20px 10px;
+                color: #fff;
+                transition: all .3s;
+                position: relative;
+                overflow: hidden;
+                i.left{
+                    cursor: pointer;
+                    position: absolute;
+                    left: -100%;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: -webkit-linear-gradient(0deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.5),hsla(0,0%,100%,0));
+                    transform: skewx(-25deg);
+                    -o-transform: skewx(-25deg);
+                    -moz-transform: skewx(-25deg);
+                    -webkit-transform: skewx(-25deg);
+                }
+                
+            }
+            a:hover{
+                box-shadow: 0 26px 40px -24px rgba(0, 36, 100, .5);
+                transform: translateY(-10px);
+                transition: all .4s;
+                i.left{
+                    left: 110%;
+                    transition: all .3s ease;
+                }
+            }
+            .art1{
+                background-color: #70c3ff;
+            }
+            .art2{
+                background-color: #fd6a7f;
+            }
+            .art3{
+                background-color: #7f8ea0;
+                }
+            .art4{
+                background-color: #89d04f;
+            }
+            margin-bottom: 10px;
+        }
+    }
+}
+.more{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    a {
+        display: block;
+        padding: 10px 16px;
+        line-height: 1;
+        font-size: 14px;
+        border-radius: 6px;
+        color: #616161;
+        background-color: #e1e1e1;
+        border: 1px solid #ccc;
+  
+        &:hover {
+          color: #333;
+          background-color: #e6e6e6;
+          border-color: #adadad;
+        }
+      }
+}
+.project{
+    box-sizing: border-box;
+    .container{
+        .clitemer{
+            margin-bottom: 10px;
+            display: block;
+            .art{
+                box-sizing: border-box;
+                border: 1px solid #e4ecf3;
+                border-radius: 4px;
+                padding: 0;
+               .img-wrap{
+                  overflow: hidden;
+                    img{
+                        width: 100%;
+                    }
+               }
+     
+                h3,p{
+                    color: #313131;
+                    font-size: 14px;
+                }
+            }
+            .art:hover{
+                    img{
+                        transform: scale(1.2);
+                        transition: all .5s;
+                    }
+            }
+        }
+        .clitemerr{
+            border-radius: 4px;
+            .artre{
+            border: 1px solid #e4ecf3;
+            padding: 0;
+              .img-wraperr{
+                width: 100%;
+                background-color: #f5f8fa;
+                height: 180px;
+                display: flex;
+                justify-content: center;
+                border-radius: 4px 4px 0 0;
+                align-items: center;
+                flex-direction:column;
+                img{
+                    width: 120px;
+                    height: 120px;
+                }
+                h3{
+                    color: #494d55;
+                    font-size: 18px;
+                    font-weight: 400
+                }
+              }  
+              p{
+                  color: #919191;
+              }
+            }
+        }
+    }
+}
+//博客
+.project{
+    .container{
+        .bok{
+            padding: 10px 15px;
+            .bk{
+                border: 1px solid #e4ecf3;
+                min-height: 325px;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                li > a {
+                    padding: 0;
+                    padding: 15px 10px;
+
+                    h5{
+                        width: 80%;
+                        font-size: 16px;
+                        color: #616161;
+                        text-align: left;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        float: left;
+                        margin: 0;
+                    }
+                    span{
+                        width: 20%;
+                        float: right;
+                        color: #616161;
+                        text-align: left;
+                    }
+                    h3 {
+                        color: #616161;
+                        text-align: left;
+                        margin: 0;
+                        font-size: 16px;
+                        padding-bottom: 15px;
+                        border-bottom: 1px solid #f5f5f5;
+                        span.btn{
+                        color: #616161;
+                        float: right;
+                        text-align: right;
+                        
+                        }
+                        span:hover{
+                            color: #ff9800;
+                        }
+                    }
+                }
+                li> a:hover{
+                    box-shadow: none;
+                    transform: translateY(0px);
+                    transition: all .4s;
+                    h5{
+                       color: #ff9800;
+                    }
+                }
+            }
+            .bk2{
+                border: 1px solid #e4ecf3;
+                min-height: 325px;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                li{
+                    width: 50%;
+                    float: left;
+                }
+                li > a {
+                    padding: 0;
+                    padding: 15px 10px;
+                    img{
+                        height: 60px;
+                        width: 60px;
+                        float: left;
+                    }
+                    h5{
+                        width: 60%;
+                        font-size: 16px;
+                        color: #616161;
+                        text-align: left;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        float: left;
+                        margin: 0;
+                        padding: 10px 0 5px 0;
+                        float: left;
+                    }
+                    h6{
+                        width: 60%;
+                        text-align: left;
+                        color: #c1c1c1;
+                        font-size: 16px;
+                        margin: 0;
+                        float: left;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                    h3 {
+                        color: #616161;
+                        text-align: left;
+                        margin: 0;
+                        font-size: 16px;
+                        padding-bottom: 15px;
+                        border-bottom: 1px solid #f5f5f5;
+                        span.btn{
+                        color: #616161;
+                        float: right;
+                        text-align: right;
+                        
+                        }
+                        span:hover{
+                            color: #ff9800;
+                        }
+                    }
+                }
+                li> a:hover{
+                    box-shadow: none;
+                    transform: translateY(0px);
+                    transition: all .4s;
+                    h5{
+                       color: #ff9800;
+                    }
+                }
+            }
+            .bk2 li:first-child{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.footer {
+    padding: 30px 0;
+    background-color: #26282c;
+    color: rgba(255, 255, 255, .4);
+  
+    .logo {
+      margin-top: 10px
+    }
+  
+    .slogan {
+      font-size: 16px;
+      margin: 20px 0 0;
+    }
+  
+    .copyright {
+      margin: 40px 0 0;
+    }
+  
+    .title {
+      font-size: 14px;
+      color: rgba(255, 255, 255, .7);
+    }
+  
+    a {
+      display: block;
+      line-height: 24px;
+      color: rgba(255, 255, 255, .4);
+  
+      &:hover {
+        text-decoration: underline;
+        color: #f2b535;
+      }
+    }
+  
+    .social {
+      margin-top: 25px;
+      padding: 0 2px;
+      text-align: center;
+      font-size: 12px;
+  
+      img {
+        max-width: 100%;
+        width: 120px;
+        height: 120px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    .footer{
+        .container{
+            .row{
+                .ad{
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer{
+        .container{
+            .row{
+                .ad{
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+}
